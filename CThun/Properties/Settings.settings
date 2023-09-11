@@ -1,0 +1,36 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="CThun.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="PlayerLeft" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">82</Value>
+    </Setting>
+    <Setting Name="PlayerTop" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">76</Value>
+    </Setting>
+    <Setting Name="OpponentLeft" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">82</Value>
+    </Setting>
+    <Setting Name="OpponentTop" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">10</Value>
+    </Setting>
+    <Setting Name="MinLeft" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">8</Value>
+    </Setting>
+    <Setting Name="MaxTop" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">94</Value>
+    </Setting>
+    <Setting Name="PlayerOrientation" Type="System.Windows.Controls.Orientation" Scope="User">
+      <Value Profile="(Default)">Vertical</Value>
+    </Setting>
+    <Setting Name="OpponentOrientation" Type="System.Windows.Controls.Orientation" Scope="User">
+      <Value Profile="(Default)">Vertical</Value>
+    </Setting>
+    <Setting Name="PlayerShowCThun" Type="CThun.DisplayMode" Scope="User">
+      <Value Profile="(Default)">Auto</Value>
+    </Setting>
+    <Setting Name="OpponentShowCThun" Type="CThun.DisplayMode" Scope="User">
+      <Value Profile="(Default)">Auto</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

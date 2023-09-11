@@ -1,0 +1,56 @@
+﻿<UserControl
+    x:Class="CThun.Views.EffectView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:conv="clr-namespace:CThun.Views.Converters"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:lex="http://wpflocalizeextension.codeplex.com"
+    xmlns:local="clr-namespace:CThun"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    lex:LocalizeDictionary.DesignCulture="en"
+    lex:ResxLocalizationProvider.DefaultAssembly="CThun"
+    lex:ResxLocalizationProvider.DefaultDictionary="Resources"
+    mc:Ignorable="d">
+    <UserControl.Resources>
+        <conv:ToUpperValueConverter x:Key="ToUpperValue" />
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibility" />
+    </UserControl.Resources>
+    <Grid Visibility="{Binding SomeVisibility, RelativeSource={RelativeSource AncestorType=UserControl}}">
+        <Grid Background="Transparent">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Image
+                Grid.ColumnSpan="2"
+                Width="100"
+                Height="70"
+                Margin="0"
+                Source="/HearthstoneDeckTracker;component/Images/icon-cthun.png" />
+            <ItemsControl Grid.Column="1" Margin="4" ItemsSource="{Binding Effects, RelativeSource={RelativeSource AncestorType=UserControl}}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="{Binding Orientation, RelativeSource={RelativeSource AncestorType=UserControl}}" />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <DataTemplate.Resources>
+                            <Style TargetType="TextBlock">
+                                <Setter Property="MaxHeight" Value="28" />
+                                <Setter Property="MaxWidth" Value="50" />
+                                <Setter Property="Padding" Value="0,6"/>
+                                <Setter Property="Foreground" Value="#3F3424" />
+                                <Setter Property="FontFamily" Value="/HearthstoneDeckTracker;component/Resources/#Chunkfive" />
+                                <Setter Property="FontSize" Value="20" />
+                                <Setter Property="VerticalAlignment" Value="Stretch"/>
+                                <Setter Property="TextAlignment" Value="Center" />
+                            </Style>
+                        </DataTemplate.Resources>
+                        <TextBlock Text="{Binding Count}" />
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </Grid>
+    </Grid>
+</UserControl>
