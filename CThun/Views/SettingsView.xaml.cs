@@ -32,7 +32,7 @@ namespace CThun.Views
         public static IEnumerable<DisplayMode> DisplayModes = Enum.GetValues(typeof(DisplayMode)).Cast<DisplayMode>();
 
         public IEnumerable<DisplayMode> PlayerCounterDisplayModes => DisplayModes;
-        public IEnumerable<DisplayMode> OpponentCounterDisplayModes => DisplayModes.Except(new[] { DisplayMode.Auto });
+        public IEnumerable<DisplayMode> OpponentCounterDisplayModes => DisplayModes;
 
         public SettingsView()
         {

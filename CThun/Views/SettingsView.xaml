@@ -214,7 +214,7 @@
                         ToolTip="{lex:Loc ShowCThunTooltip}" />
                     <ComboBox
                         x:Name="ComboBoxOpponentShowCThun"
-                        ItemsSource="{Binding PlayerCounterDisplayModes, RelativeSource={RelativeSource AncestorType=ScrollViewer}}"
+                        ItemsSource="{Binding OpponentCounterDisplayModes, RelativeSource={RelativeSource AncestorType=ScrollViewer}}"
                         SelectedItem="{Binding OpponentShowCThun, Source={x:Static properties:Settings.Default}}"
                         Style="{StaticResource ComboBoxStyle}"
                         ToolTip="{lex:Loc ShowCThunTooltip}">
