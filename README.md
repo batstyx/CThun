@@ -1,6 +1,6 @@
-[![Latest Release](https://img.shields.io/github/release-pre/batstyx/CThun.svg)](https://github.com/batstyx/CThun/releases) [![Build Status](https://github.com/batstyx/CThun/actions/workflows/build-and-release-on-push-or-pull-request.yml/badge.svg)](https://github.com/batstyx/CThun/actions/workflows/build-and-release-on-push-or-pull-request.yml)
-
 # C'Thun
+
+[![Latest Release](https://img.shields.io/github/release-pre/batstyx/CThun.svg)](https://github.com/batstyx/CThun/releases) [![Build Status](https://github.com/batstyx/CThun/actions/workflows/build-and-release-on-push-or-pull-request.yml/badge.svg)](https://github.com/batstyx/CThun/actions/workflows/build-and-release-on-push-or-pull-request.yml)
 
 [C'Thun](https://hearthstone.blizzard.com/en-gb/cards/38857-cthun) Attack/Health Counter [Hearthstone Deck Tracker](https://hsdecktracker.net/) plugin
 
