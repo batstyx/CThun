@@ -8,7 +8,7 @@
 
 Copy of HDT internal C'Thun counter as plugin with added display configuration.
 
-![Counter relative to HDT Spell/Jade counters](screenshots/cthun-relative-to-hdt-counters.png)
+![Counter relative to HDT Spell/Jade counters](Screenshots/cthun-relative-to-hdt-counters.png)
 
 Displays current value for both the player and opponent for:-
 
@@ -22,9 +22,11 @@ Counters can be displayed for player and opponent:-
 - Auto (Player only): When C'Thun is detected in play
 - Never
 
-Counter display can be modified by:-
+Counter display can be modified for:-
 
 - Position
+- Scale
+- Opacity
 
 ## Installation
 
