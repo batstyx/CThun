@@ -19,7 +19,7 @@ Displays current value for both the player and opponent for:-
 Counters can be displayed for player and opponent:-
 
 - Always
-- Auto (Player only): When C'Thun is detected in play
+- Auto: When C'Thun is detected in play
 - Never
 
 Counter display can be modified for:-
