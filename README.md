@@ -1,6 +1,6 @@
-[![Latest Release](https://img.shields.io/github/release-pre/batstyx/CThun.svg)](https://github.com/batstyx/CThun/releases) [![Build Status](https://github.com/batstyx/CThun/actions/workflows/build-and-release-on-push-or-pull-request.yml/badge.svg)](https://github.com/batstyx/CThun/actions/workflows/build-and-release-on-push-or-pull-request.yml)
-
 # C'Thun
+
+[![Latest Release](https://img.shields.io/github/release-pre/batstyx/CThun.svg)](https://github.com/batstyx/CThun/releases) [![Build Status](https://github.com/batstyx/CThun/actions/workflows/build-and-release-on-push-or-pull-request.yml/badge.svg)](https://github.com/batstyx/CThun/actions/workflows/build-and-release-on-push-or-pull-request.yml)
 
 [C'Thun](https://hearthstone.blizzard.com/en-gb/cards/38857-cthun) Attack/Health Counter [Hearthstone Deck Tracker](https://hsdecktracker.net/) plugin
 
@@ -8,7 +8,7 @@
 
 Copy of HDT internal C'Thun counter as plugin with added display configuration.
 
-![Counter relative to HDT Spell/Jade counters](Screenshots/cthun-relative-to-hdt-counters.png)
+![Counter relative to HDT Spell/Jade counters](screenshots/cthun-relative-to-hdt-counters.png)
 
 Displays current value for both the player and opponent for:-
 
@@ -19,7 +19,7 @@ Displays current value for both the player and opponent for:-
 Counters can be displayed for player and opponent:-
 
 - Always
-- Auto (Player only): When C'Thun is detected in play
+- Auto: When C'Thun is detected in play
 - Never
 
 Counter display can be modified for:-
