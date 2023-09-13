@@ -106,6 +106,15 @@ namespace CThun.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Opacity.
+        /// </summary>
+        internal static string Opacity {
+            get {
+                return ResourceManager.GetString("Opacity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Opponent.
         /// </summary>
         internal static string OpponentTitle {
@@ -138,6 +147,33 @@ namespace CThun.Properties {
         internal static string PluginDescription {
             get {
                 return ResourceManager.GetString("PluginDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Scale.
+        /// </summary>
+        internal static string Scale {
+            get {
+                return ResourceManager.GetString("Scale", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reset to Default.
+        /// </summary>
+        internal static string SettingsDisplayResetButton {
+            get {
+                return ResourceManager.GetString("SettingsDisplayResetButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Display.
+        /// </summary>
+        internal static string SettingsDisplayTitle {
+            get {
+                return ResourceManager.GetString("SettingsDisplayTitle", resourceCulture);
             }
         }
         

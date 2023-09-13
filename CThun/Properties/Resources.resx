@@ -132,6 +132,9 @@
   <data name="DisplayModeNever" xml:space="preserve">
     <value>Never</value>
   </data>
+  <data name="Opacity" xml:space="preserve">
+    <value>Opacity</value>
+  </data>
   <data name="OpponentTitle" xml:space="preserve">
     <value>Opponent</value>
   </data>
@@ -143,6 +146,15 @@
   </data>
   <data name="PluginDescription" xml:space="preserve">
     <value>Display C'Thun current Attack/Health for both the player and opponent</value>
+  </data>
+  <data name="Scale" xml:space="preserve">
+    <value>Scale</value>
+  </data>
+  <data name="SettingsDisplayResetButton" xml:space="preserve">
+    <value>Reset to Default</value>
+  </data>
+  <data name="SettingsDisplayTitle" xml:space="preserve">
+    <value>Display</value>
   </data>
   <data name="SettingsHorizontal" xml:space="preserve">
     <value>Horizontal</value>

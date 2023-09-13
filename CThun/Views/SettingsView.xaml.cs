@@ -48,5 +48,15 @@ namespace CThun.Views
         {
             Settings.Default.ResetOpponentPosition();
         }
+
+        private void ButtonResetPlayerDisplay_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            Settings.Default.ResetPlayerDisplay();
+        }
+
+        private void ButtonResetOpponentDisplay_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            Settings.Default.ResetOpponentDisplay();
+        }
     }
 }

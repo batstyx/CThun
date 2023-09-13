@@ -7,6 +7,7 @@ using System.Windows;
 
 using CoreAPI = Hearthstone_Deck_Tracker.API.Core;
 using Hearthstone_Deck_Tracker.Enums;
+using System.Windows.Media;
 
 namespace CThun
 {
@@ -35,6 +36,39 @@ namespace CThun
 
             Plugin.Events.GameStart += GameStart;
             Plugin.Events.InMenu += InMenu;
+
+            Settings.Default.PropertyChanged += SettingsChanged;
+            SettingsChanged(null, null);
+        }
+
+        private void RefreshPlayerOpacity() => PlayerView.Opacity = Settings.Default.PlayerOpacity / 100;
+        private void RefreshPlayerScale() => PlayerView.RenderTransform = new ScaleTransform(Settings.Default.PlayerScale / 100, Settings.Default.PlayerScale / 100);
+        private void RefreshOpponentOpacity() => OpponentView.Opacity = Settings.Default.OpponentOpacity / 100;
+        private void RefreshOpponentScale() => OpponentView.RenderTransform = new ScaleTransform(Settings.Default.OpponentScale / 100, Settings.Default.OpponentScale / 100);
+        private void SettingsChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+        {
+            var property = e?.PropertyName;
+            switch (property)
+            {
+                case nameof(Settings.Default.PlayerOpacity):
+                    RefreshPlayerOpacity();
+                    break;
+                case nameof(Settings.Default.PlayerScale):
+                    RefreshPlayerScale();
+                    break;
+                case nameof(Settings.Default.OpponentOpacity):
+                    RefreshOpponentOpacity();
+                    break;
+                case nameof(Settings.Default.OpponentScale):
+                    RefreshOpponentScale();
+                    break;
+                default:
+                    RefreshPlayerOpacity();
+                    RefreshPlayerScale();
+                    RefreshOpponentOpacity();
+                    RefreshOpponentScale();
+                    break;
+            }           
         }
 
         private static EffectView CreateView()
