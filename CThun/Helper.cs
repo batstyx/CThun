@@ -42,7 +42,7 @@ namespace CThun
                     return false;
             }
         }
-        public static bool ShowCounter(this Player player, IEffectConfig config) => player.ShowCounter(config.Player, config.ShowOnCardIds);
+        public static bool ShowCounter(this Player player, EffectConfig config) => player.ShowCounter(config.Player, config.ShowOnCardIds);
 
         public static int GetCThunAttack(this Player player) => GetCThunValue(player, GameTag.CTHUN_ATTACK_BUFF);
         public static int GetCThunHealth(this Player player) => GetCThunValue(player, GameTag.CTHUN_HEALTH_BUFF);

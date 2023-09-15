@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CThun.Properties
+﻿namespace CThun.Properties
 {
     public sealed partial class Settings
     {

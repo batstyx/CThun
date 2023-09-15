@@ -1,7 +1,6 @@
-﻿using Hearthstone_Deck_Tracker;
-using Hearthstone_Deck_Tracker.Enums;
+﻿using CThun.Properties;
+using Hearthstone_Deck_Tracker;
 using MahApps.Metro.Controls;
-using CThun.Properties;
 using System;
 using System.Collections.Generic;
 using System.Linq;
