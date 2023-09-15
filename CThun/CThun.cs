@@ -1,4 +1,5 @@
-﻿using CThun.Properties;
+﻿using CThun.Effects;
+using CThun.Properties;
 using CThun.Views;
 using Hearthstone_Deck_Tracker;
 using Hearthstone_Deck_Tracker.API;
@@ -37,7 +38,12 @@ namespace CThun
 
         private static EffectView CreateView()
         {
-            var view = new EffectView(new EffectContext());
+            var view = new EffectView(new EffectContext
+            {
+                Attack = new CThunAttack().Create(),
+                Health = new CThunHealth().Create(),
+                Taunt = new CThunTaunt().Create()
+            });
             CoreAPI.OverlayCanvas.Children.Add(view);
             return view;
         }

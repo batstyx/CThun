@@ -42,11 +42,24 @@ namespace CThun
                     return false;
             }
         }
-        public static bool ShowCounter(this Player player, EffectConfig config) => player.ShowCounter(config.Player, config.ShowOnCardIds);
+        public static bool ShowCounter(this Player player, EffectConfig config) 
+            => player.ShowCounter(config.Player, config.ShowOnCardIds);
 
-        public static int GetCThunAttack(this Player player) => GetCThunValue(player, GameTag.CTHUN_ATTACK_BUFF);
-        public static int GetCThunHealth(this Player player) => GetCThunValue(player, GameTag.CTHUN_HEALTH_BUFF);
-        private static int GetCThunValue(Player player, GameTag tag) => GetCThunValue(player == Core.Game.Player ? Core.Game.PlayerEntity : Core.Game.OpponentEntity, tag);
-        private static int GetCThunValue(Entity player, GameTag tag) => (player?.HasTag(tag) ?? false ? player.GetTag(tag) + 6 : 6);
+        public static int GetCThunAttack(this Player player) 
+            => player.GetEntity().GetCThunAttackOrHealth(GameTag.CTHUN_ATTACK_BUFF);
+        public static int GetCThunHealth(this Player player) 
+            => player.GetEntity().GetCThunAttackOrHealth(GameTag.CTHUN_HEALTH_BUFF);
+        public static int GetCThunTaunt(this Player player) 
+            => player.GetEntity().GetCThunTaunt();
+        private static Entity GetEntity(this Player player)
+        {
+            if (player == Core.Game.Player) return Core.Game.PlayerEntity;
+            else if (player == Core.Game.Opponent) return Core.Game.OpponentEntity;
+            return null;
+        }
+        private static int GetCThunTaunt(this Entity player) 
+            => player?.HasTag(GameTag.CTHUN_TAUNT_BUFF) ?? false ? player.GetTag(GameTag.CTHUN_TAUNT_BUFF) : 0;
+        private static int GetCThunAttackOrHealth(this Entity player, GameTag tag) 
+            => (player?.HasTag(tag) ?? false ? player.GetTag(tag) + 6 : 6);
     }
 }

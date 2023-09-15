@@ -10,11 +10,13 @@ Copy of HDT internal C'Thun counter as plugin with added display configuration.
 
 ![Counter relative to HDT Spell/Jade counters](screenshots/cthun-relative-to-hdt-counters.png)
 
-Displays current value for both the player and opponent for:-
+Displays [C'Thun](https://hearthstone.blizzard.com/en-gb/cards/38857-cthun) properties for both player and opponent :-
 
-- [C'Thun](https://hearthstone.blizzard.com/en-gb/cards/38857-cthun)
-  - Attack
-  - Health
+- Attack
+- Health
+- Taunt
+
+![Counter with Taunt displayed](screenshots/cthun-22-22-taunt.png)
 
 Counters can be displayed for player and opponent:-
 

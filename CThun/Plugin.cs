@@ -31,9 +31,6 @@ namespace CThun
             MenuItem = new MenuItem { Header = Name };
             MenuItem.Click += (sender, args) => OnButtonPress();
 
-            EffectConfig.AddToLookup<CThunAttack>(GameTag.CTHUN_ATTACK_BUFF.ToString());
-            EffectConfig.AddToLookup<CThunHealth>(GameTag.CTHUN_HEALTH_BUFF.ToString());
-
             CThun = new CThun();
         }
 
@@ -45,8 +42,6 @@ namespace CThun
 
             CThun?.Dispose();
             CThun = null;
-
-            EffectConfig.Lookup.Clear();
         }
     }
 }

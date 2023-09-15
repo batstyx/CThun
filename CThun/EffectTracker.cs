@@ -51,7 +51,7 @@ namespace CThun
         {
             foreach (var effect in Effects)
             {
-                effect.SetValue(effect.Config.GetValue(Player));
+                effect.Value = effect.Config.GetValue(Player);
             }
         }
     }

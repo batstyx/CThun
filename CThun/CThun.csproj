@@ -75,6 +75,7 @@
     <Compile Include="Effect.cs" />
     <Compile Include="EffectContext.cs" />
     <Compile Include="Effects\CThunAttack.cs" />
+    <Compile Include="Effects\CThunTaunt.cs" />
     <Compile Include="Effects\CThunHealth.cs" />
     <Compile Include="EffectTracker.cs" />
     <Compile Include="Helper.cs" />
@@ -99,6 +100,7 @@
     <Compile Include="Properties\Strings.cs" />
     <Compile Include="Views\Converters\EnumDescriptionConverter.cs" />
     <Compile Include="Views\Converters\EnumToBoolConverter.cs" />
+    <Compile Include="Views\Converters\IntToVisibilityConverter.cs" />
     <Compile Include="Views\EffectView.xaml.cs">
       <DependentUpon>EffectView.xaml</DependentUpon>
     </Compile>
