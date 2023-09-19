@@ -24,6 +24,7 @@
             </ResourceDictionary.MergedDictionaries>
             <conv:EnumDescriptionConverter x:Key="EnumDescriptionConverter" />
             <conv:EnumToBoolConverter x:Key="EnumToBoolConverter" />
+            <conv:ToUpperValueConverter x:Key="ToUpperValueConverter" />
             <Style x:Key="TitleStyle" TargetType="Label">
                 <Setter Property="FontSize" Value="18" />
                 <Setter Property="FontWeight" Value="bold" />
@@ -53,6 +54,21 @@
                 BasedOn="{StaticResource MetroGroupBox}"
                 TargetType="GroupBox">
                 <Setter Property="Margin" Value="5" />
+                <Setter Property="HeaderTemplate">
+                    <Setter.Value>
+                        <DataTemplate>
+                            <Grid>
+                                <TextBlock VerticalAlignment="Center" Text="{Binding Title, Converter={StaticResource ToUpperValueConverter}}" />
+                                <Button
+                                    HorizontalAlignment="Right"
+                                    Command="{Binding Command}"
+                                    Content="&#xE777;"
+                                    FontFamily="Segoe MDL2 Assets"
+                                    ToolTip="{lex:Loc SettingsResetButtonTootip}"/>
+                            </Grid>
+                        </DataTemplate>
+                    </Setter.Value>
+                </Setter>
             </Style>
             <Style
                 x:Key="SliderStyle"
@@ -119,7 +135,7 @@
                         </ComboBox.ItemTemplate>
                     </ComboBox>
                 </DockPanel>
-                <GroupBox Header="{lex:Loc SettingsPositionTitle}" Style="{StaticResource PositionGroupStyle}">
+                <GroupBox Header="{Binding PlayerPositionGroup, RelativeSource={RelativeSource AncestorType=ScrollViewer}}" Style="{StaticResource PositionGroupStyle}">
                     <StackPanel>
                         <DockPanel Style="{StaticResource SliderPanelStyle}">
                             <Slider
@@ -151,15 +167,9 @@
                                 DockPanel.Dock="Left"
                                 ToolTip="{lex:Loc SettingsVerticalTooltip}" />
                         </DockPanel>
-                        <Separator Style="{StaticResource ResetToDefaultSeparatorStyle}" />
-                        <Button
-                            Name="ButtonResetPlayerPosition"
-                            Width="150"
-                            Click="ButtonResetPlayerPosition_Click"
-                            Content="{lex:Loc SettingsPositionResetButton}" />
                     </StackPanel>
                 </GroupBox>
-                <GroupBox Header="{lex:Loc SettingsDisplayTitle}" Style="{StaticResource PositionGroupStyle}">
+                <GroupBox Header="{Binding PlayerDisplayGroup, RelativeSource={RelativeSource AncestorType=ScrollViewer}}" Style="{StaticResource PositionGroupStyle}">
                     <StackPanel>
                         <DockPanel Style="{StaticResource SliderPanelStyle}">
                             <Slider
@@ -191,12 +201,6 @@
                                 Style="{StaticResource SliderTextStyle}"
                                 Text="{Binding PlayerScale, Source={x:Static properties:Settings.Default}, StringFormat={}{0}%}" />
                         </DockPanel>
-                        <Separator Style="{StaticResource ResetToDefaultSeparatorStyle}" />
-                        <Button
-                            Name="ButtonResetPlayerDisplay"
-                            Width="150"
-                            Click="ButtonResetPlayerDisplay_Click"
-                            Content="{lex:Loc SettingsDisplayResetButton}" />
                     </StackPanel>
                 </GroupBox>
             </StackPanel>
@@ -221,7 +225,7 @@
                         </ComboBox.ItemTemplate>
                     </ComboBox>
                 </DockPanel>
-                <GroupBox Header="{lex:Loc SettingsPositionTitle}" Style="{StaticResource PositionGroupStyle}">
+                <GroupBox Header="{Binding OpponentPositionGroup, RelativeSource={RelativeSource AncestorType=ScrollViewer}}" Style="{StaticResource PositionGroupStyle}">
                     <StackPanel>
                         <DockPanel Style="{StaticResource SliderPanelStyle}">
                             <Slider
@@ -253,15 +257,9 @@
                                 DockPanel.Dock="Left"
                                 ToolTip="{lex:Loc SettingsVerticalTooltip}" />
                         </DockPanel>
-                        <Separator Style="{StaticResource ResetToDefaultSeparatorStyle}" />
-                        <Button
-                            Name="ButtonResetOpponentPosition"
-                            Width="150"
-                            Click="ButtonResetOpponentPosition_Click"
-                            Content="{lex:Loc SettingsPositionResetButton}" />
                     </StackPanel>
                 </GroupBox>
-                <GroupBox Header="{lex:Loc SettingsDisplayTitle}" Style="{StaticResource PositionGroupStyle}">
+                <GroupBox Header="{Binding OpponentDisplayGroup, RelativeSource={RelativeSource AncestorType=ScrollViewer}}" Style="{StaticResource PositionGroupStyle}">
                     <StackPanel>
                         <DockPanel Style="{StaticResource SliderPanelStyle}">
                             <Slider
@@ -293,12 +291,6 @@
                                 Style="{StaticResource SliderTextStyle}"
                                 Text="{Binding OpponentScale, Source={x:Static properties:Settings.Default}, StringFormat={}{0}%}" />
                         </DockPanel>
-                        <Separator Style="{StaticResource ResetToDefaultSeparatorStyle}" />
-                        <Button
-                            Name="ButtonResetOpponentDisplay"
-                            Width="150"
-                            Click="ButtonResetOpponentDisplay_Click"
-                            Content="{lex:Loc SettingsDisplayResetButton}" />
                     </StackPanel>
                 </GroupBox>
             </StackPanel>

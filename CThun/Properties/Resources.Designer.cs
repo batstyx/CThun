@@ -160,15 +160,6 @@ namespace CThun.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Reset to Default.
-        /// </summary>
-        internal static string SettingsDisplayResetButton {
-            get {
-                return ResourceManager.GetString("SettingsDisplayResetButton", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Display.
         /// </summary>
         internal static string SettingsDisplayTitle {
@@ -196,20 +187,20 @@ namespace CThun.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Reset to Default.
-        /// </summary>
-        internal static string SettingsPositionResetButton {
-            get {
-                return ResourceManager.GetString("SettingsPositionResetButton", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Position.
         /// </summary>
         internal static string SettingsPositionTitle {
             get {
                 return ResourceManager.GetString("SettingsPositionTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reset to Default.
+        /// </summary>
+        internal static string SettingsResetButtonTootip {
+            get {
+                return ResourceManager.GetString("SettingsResetButtonTootip", resourceCulture);
             }
         }
         

@@ -150,9 +150,6 @@
   <data name="Scale" xml:space="preserve">
     <value>Scale</value>
   </data>
-  <data name="SettingsDisplayResetButton" xml:space="preserve">
-    <value>Reset to Default</value>
-  </data>
   <data name="SettingsDisplayTitle" xml:space="preserve">
     <value>Display</value>
   </data>
@@ -162,11 +159,11 @@
   <data name="SettingsHorizontalTooltip" xml:space="preserve">
     <value>% Screen Position (Left &lt;-&gt; Right)</value>
   </data>
-  <data name="SettingsPositionResetButton" xml:space="preserve">
-    <value>Reset to Default</value>
-  </data>
   <data name="SettingsPositionTitle" xml:space="preserve">
     <value>Position</value>
+  </data>
+  <data name="SettingsResetButtonTootip" xml:space="preserve">
+    <value>Reset to Default</value>
   </data>
   <data name="SettingsTitle" xml:space="preserve">
     <value>C'Thun Settings</value>
