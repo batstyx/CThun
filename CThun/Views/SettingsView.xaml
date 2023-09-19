@@ -151,6 +151,10 @@
                                 Content="{lex:Loc SettingsHorizontal}"
                                 DockPanel.Dock="Left"
                                 ToolTip="{lex:Loc SettingsHorizontalTooltip}" />
+                            <TextBlock
+                                DockPanel.Dock="Right"
+                                Style="{StaticResource SliderTextStyle}"
+                                Text="{Binding PlayerLeft, Source={x:Static properties:Settings.Default}, StringFormat={}{0}%}" />
                         </DockPanel>
                         <DockPanel Style="{StaticResource SliderPanelStyle}">
                             <Slider
@@ -166,6 +170,10 @@
                                 Content="{lex:Loc SettingsVertical}"
                                 DockPanel.Dock="Left"
                                 ToolTip="{lex:Loc SettingsVerticalTooltip}" />
+                            <TextBlock
+                                DockPanel.Dock="Right"
+                                Style="{StaticResource SliderTextStyle}"
+                                Text="{Binding PlayerTop, Source={x:Static properties:Settings.Default}, StringFormat={}{0}%}" />
                         </DockPanel>
                     </StackPanel>
                 </GroupBox>
@@ -241,6 +249,10 @@
                                 Content="{lex:Loc SettingsHorizontal}"
                                 DockPanel.Dock="Left"
                                 ToolTip="{lex:Loc SettingsHorizontalTooltip}" />
+                            <TextBlock
+                                DockPanel.Dock="Right"
+                                Style="{StaticResource SliderTextStyle}"
+                                Text="{Binding OpponentLeft, Source={x:Static properties:Settings.Default}, StringFormat={}{0}%}" />                           
                         </DockPanel>
                         <DockPanel Style="{StaticResource SliderPanelStyle}">
                             <Slider
@@ -256,6 +268,10 @@
                                 Content="{lex:Loc SettingsVertical}"
                                 DockPanel.Dock="Left"
                                 ToolTip="{lex:Loc SettingsVerticalTooltip}" />
+                            <TextBlock
+                                DockPanel.Dock="Right"
+                                Style="{StaticResource SliderTextStyle}"
+                                Text="{Binding OpponentTop, Source={x:Static properties:Settings.Default}, StringFormat={}{0}%}" />
                         </DockPanel>
                     </StackPanel>
                 </GroupBox>
