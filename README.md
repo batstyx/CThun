@@ -1,3 +1,5 @@
+## This Plugin Is Deprecated
+
 # C'Thun
 
 [![Latest Release](https://img.shields.io/github/release-pre/batstyx/CThun.svg)](https://github.com/batstyx/CThun/releases) [![Build Status](https://github.com/batstyx/CThun/actions/workflows/build-and-release-on-push-or-pull-request.yml/badge.svg)](https://github.com/batstyx/CThun/actions/workflows/build-and-release-on-push-or-pull-request.yml)
